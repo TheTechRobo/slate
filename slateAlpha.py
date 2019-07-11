@@ -35,3 +35,5 @@ while True:
             my_file = open(file, "a") #open user file as append
             my_file.write('''
             ''')) #Add new line?  to the file
+    else: 
+        print("Well... you need to type a(ppend), or (over)w(rite), or (new)l(ine) To exit, type either a, w, or l. Then type exit,!")
