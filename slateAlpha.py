@@ -1,6 +1,6 @@
 #Experimento!  
 #SLATE text editor
-#Version 0.2.3a
+#Version 0.2.3b
 print("HELLLLLLLLLO GitHub! ")
 print("Going to save files in directory _shell.py is in. If you want to exit, type exit,!")
 print("slate version 0.2.3 (ALPHA)")
