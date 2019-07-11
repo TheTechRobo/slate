@@ -1,9 +1,9 @@
 #Experimento!  
 #SLATE text editor
-#Version 0.2.3b
+#Version 0.2.3c
 print("HELLLLLLLLLO GitHub! ")
 print("Going to save files in directory _shell.py is in. If you want to exit, type exit,!")
-print("slate version 0.2.3 (ALPHA)")
+print("slate version 0.2.3c (ALPHA)")
 while True:
     mode = input("Mode: a for append, w for overwrite (or newfile), l for newline. Case-sensitive. ")
     if mode == "a":
