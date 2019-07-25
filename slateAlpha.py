@@ -4,9 +4,9 @@
 print("Going to save files in directory _shell.py is in. If you want to exit, type exit,!")
 print("slate version 0.2.4 (alpha)")
 while True:
-    mode = input("Mode: a for append, w for overwrite (or newfile), l for newline. Case-sensitive. ")
+    mode = input("Mode: a for append, w for overwrite (or newfile), l for newline, exit,! for exit. Case-sensitive. ")
     if mode == "a":
-        print("Mode: Append (A)")
+        print("Mode: Append (a)")
         file = input("Filename?")
         if file == "exit,!":
             exit()
@@ -22,7 +22,7 @@ while True:
                 my_file = open(file, "W")  #open user-chosen file as readwrite
                 my_file.write(input("Type a line. ")) #Write to the file
     elif mode == "l":
-        print("Mode: Newline (L)")
+        print("Mode: Newline (l)")
         file = input("Filename?")
         if file == "exit,!":
             exit()
