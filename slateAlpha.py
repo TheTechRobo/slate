@@ -6,7 +6,7 @@ import time
 print("Going to save files in directory slateAlpha.py is in. If you want to exit, type exit,!")
 print("slate version 0.2.5 (alpha)")
 print("Loading................")
-time.sleep(8)
+time.sleep(5)
 print("Done.")
 while True:
     for i in range(0, 11):
@@ -51,3 +51,5 @@ while True:
         for i in range(0, 11):
             print()
         print("Command not found; you need to type a(ppend), or (over)w(rite), or (new)l(ine) To exit, exit,!. Sorry for the inconvenience")
+        print("Please Wait")
+        time.sleep(4)
