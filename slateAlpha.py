@@ -23,8 +23,7 @@ while True:
 			exit()
         else:
             my_file = open(file, "a") #open user file as append
-            for i in range(0, 11):
-            print()
+            os.system('clear')
             my_file.write(input("Type a line. ")) #Append to the file
     elif mode == "A":
         os.system('clear')
@@ -36,8 +35,7 @@ while True:
 			exit()
         else:
             my_file = open(file, "a") #open user file as append
-            for i in range(0, 11):
-            print()
+            os.system('clear')
             my_file.write(input("Type a line. ")) #Append to the file
 #OVERWRITE.
 	elif mode == "w":
