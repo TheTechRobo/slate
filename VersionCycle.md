@@ -1,25 +1,21 @@
-# version cycle
-#### File Version 0.9.3
-## This will show info about all the version categories
+# VersionCycle
+## This shows info about all the stages of a version
 # Prereleases
 ### 1st Stage: Alpha
-It is the first version. Not very developed yet. 
+It is the first stage of the new version. Not very developed yet. RC 1
 ### 2nd Stage: Beta
-More developed = better program. It starts at version 0.3. 
+More developed = better version. RC2
 ### 3rd Stage: Gamma
-This is the getting-near-to-release version. It's versions 0.6 and beyond. 
+This is the getting-near-to-release version. It's RC 3. 
 ### 4th Stage and Last Prerelease: Omega
-This is the last prerelease. It's versions 0.8.1 and beyond. 
-# Releases. 
-### 5th Stage: Early Development
-First release. 1.0 and beyond. Usually there are many updates here
-### 6th Stage: Development
-This is when it starts getting updated less. 5.3 and beyond. It's when it's a pretty stable program and the dev settles down
-### 7th Stage: Late Development
-This is when it nears rare updates. 11.0 and beyond. 
-### 8th Stage: Rare Development
-This is when it is usually rarely updated. 20.0 and beyond
-### 9th Stage: Obsoletion
-Hope it never happens with my programs. It stops getting updated much.  It depends when it starts, sometimes NEVER
-### 10th Stage: Abandoned
-Stops getting updated at all. Sometimes new devs come along and the whole cycle repeats. Sometimes just the release cycle. Sometimes the whole cycle. 
+This is the last prerelease. RC 4.
+### 5th Stage: Release
+1.0, 2.0.......A lot of features
+### 6th Release: Smaller Update
+Contains less features. And less bugfixes. But still nice to have.
+### 7th Release: Patch Update
+Typically 0-1 features, but more bugfixes.
+### 8th Release: Commit
+Just a commit, only matters in future releases and cloning
+
+Note that some may be skipped (especially prereleses)
