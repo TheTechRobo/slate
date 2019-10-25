@@ -6,6 +6,7 @@ print("Going to save files in current working directory (typically ~). If you wa
 print("slate version 0.3 (alpha)")
 print("Loading................")
 from time import *
+import os
 def append():
     os.system('clear')
     print("Mode: Append (a)")
@@ -30,7 +31,7 @@ def overwrite():
     elif file == "EXIT,!":
         exit()
     else:
-        my_file = open(file, "W")  #open user-chosen file as readwrite
+        my_file = open(file, "w")  #open user-chosen file as readwrite
         my_file.write(input("Type a line. ")) #Write to the file
 		
 def newline():
@@ -43,6 +44,8 @@ def newline():
         my_file = open(file, "a") #open user file as append
         my_file.write('''
         ''') # Add new line? to the file
+def nothing():
+	pass
 print("Done.")
 while True:
     os.system('clear')
@@ -53,23 +56,27 @@ while True:
     elif mode == "A":
         append()
 #OVERWRITE.
-	if mode == "w":
+    if mode == "w":
         overwrite()
     elif mode == "W":
         overwrite()
 #NEWLINE
-	if mode == "l":
+    if mode == "l":
         newline()
-	elif mode == "L":
-		newline()
+    elif mode == "L":
+        newline()
 #EXITING
     if mode == "exit,!":
         exit()
-	elif mode == "EXIT,!":
-		exit()
-#OTHERWISE...
+    elif mode == "EXIT,!":
+        exit()
+#OTHERWISE......
     else: 
         os.system('clear')
         print("Command not found; you need to type a(ppend), or (over)w(rite), or (new)l(ine) To exit, exit,!. Sorry for the inconvenience")
-        print("Please Wait")
+        print("Please wait...")
         sleep(1.5)
+# No More If Statements
+    os.system('clear')
+    print("Please Wait")
+    sleep(1.5)
