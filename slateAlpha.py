@@ -1,9 +1,9 @@
 #SLATE is a Eureka
 #SLATE text editor
-#Version 0.3
+#Version 0.3.1
 #setup
 print("Going to save files in current working directory (typically ~). If you want to exit, type exit,!")
-print("slate version 0.3 (alpha)")
+print("slate version 0.3.1 (alpha)")
 print("Loading................")
 from time import *
 import os
