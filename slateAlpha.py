@@ -2,6 +2,7 @@
 #SLATE text editor
 #Version 0.3.1
 #setup
+from sys import exit
 print("Going to save files in current working directory (typically ~). If you want to exit, type exit,!")
 print("slate version 0.3.1 (alpha)")
 print("Loading................")
