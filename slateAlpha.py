@@ -14,8 +14,8 @@ def append():
     file = input("Filename?")
     if file == "exit,!":
     	exit()
-    elif file == "EXIT,!":
-        exit()
+	elif file == "EXIT,!":
+		exit()
     else:
         my_file = open(file, "a") #open user file as append
         os.system('clear')
@@ -51,25 +51,18 @@ print("Done.")
 while True:
     os.system('clear')
     mode = input("Mode: a for append, w for overwrite (or newfile), l for newline, exit,! for exit. ")
+    mode.lower()
 	#APPEND
     if mode == "a":
 	    append()
-    elif mode == "A":
-        append()
 #OVERWRITE.
     if mode == "w":
-        overwrite()
-    elif mode == "W":
         overwrite()
 #NEWLINE
     if mode == "l":
         newline()
-    elif mode == "L":
-        newline()
 #EXITING
     if mode == "exit,!":
-        exit()
-    elif mode == "EXIT,!":
         exit()
 #OTHERWISE......
     else: 
