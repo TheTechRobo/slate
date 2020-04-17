@@ -1,24 +1,15 @@
 # Program Cycle
-## The stages of a program.
-# Prereleases
-### 1st Stage: Alpha
-It is the first version. Not very developed yet. 
-### 2nd Stage: Beta
-More developed = better program. It starts at version 0.3. 
-### 3rd Stage: Gamma
-This is the getting-near-to-release version. It's versions 0.6 and beyond. 
-### 4th Stage and Last Prerelease: Omega
-This is the last prerelease. It's versions 0.8.1 and beyond. 
-# Releases. 
-### 5th Stage: Early Development
-First release. 1.0 and beyond. Usually there are many updates here
-### 6th Stage: Development
-This is when it starts getting updated less. 5.3 and beyond. It's when it's a pretty stable program and the dev settles down
-### 7th Stage: Late Development
-This is when it nears rare updates. 11.0 and beyond. 
-### 8th Stage: Rare Development
-This is when it is usually rarely updated. 20.0 and beyond
-### 9th Stage: Obsoletion
-Hope it never happens with my programs. It stops getting updated much.  It depends when it starts, sometimes NEVER
-### 10th Stage: Abandoned
-Stops getting updated at all. Sometimes new devs come along and the whole cycle repeats. Sometimes just the release cycle. Sometimes the whole cycle. 
+## The lifecycle of a program. (as I have noticed)
+
+### 1st Stage: Early Development
+First release. Usually there are many updates here
+### 2nd Stage: Development
+This is when it starts getting updated less. It's when it's a pretty stable program and the dev settles down.
+### 3rd Stage: Late Development
+This is when it nears rare updates. Features start to get scarce.
+### 4th Stage: Rare Development
+This is when it is usually rarely updated. The developer has a limited amount of time to add what they want to. People may start to get worried about the fifth stage starting:
+### 5th Stage: Abandoned
+Stops getting updated at all. Sometimes new devs come along and the whole cycle repeats. Sometimes not.
+### 6th Stage: Obsoletion
+Hope it never happens with my programs: No one uses the program because it is no longer updated. It depends when it starts, sometimes NEVER
