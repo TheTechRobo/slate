@@ -27,9 +27,7 @@ def overwrite():
     os.system('clear')
     print("Mode: Overwrite or newfile (w)")
     file = input("Enter filename: ")
-    if file == "exit,!":
-        exit()
-    elif file == "EXIT,!":
+    if file.lower() == "exit,!":
         exit()
     else:
         my_file = open(file, "w+")  #open user-chosen file as readwrite
@@ -39,7 +37,7 @@ def newline():
     os.system('clear')
     print("Mode: Newline (l)")
     file = input("Filename?")
-    if file == "exit,!":
+    if file.lower() == "exit,!":
         exit()
     else:
         my_file = open(file, "a+") #open user file as append
@@ -50,7 +48,7 @@ print("Done.")
 while True:
     os.system('clear')
     mode = input("Mode: a for append, w for overwrite (or newfile), l for newline, exit,! for exit. ")
-    mode.lower()
+    mode = mode.lower()
 	#APPEND
     if mode == "a":
 	    append()
