@@ -2,21 +2,22 @@ from tkinter import *
 from tkinter import messagebox as msg
 from tkinter import filedialog #https://pythonspot.com/tk-file-dialogs/
 def save():
-    from os.path import expanduser
-    home = expanduser("~")
-    filename = filedialog.asksaveasfilename(initialdir=home, title="Saving file")
-    print("Saved to  %s" % filename)
-    theText = text.get(0.0, "end-1c") #https://stackoverflow.com/a/14824164/9654083
-    with open(filename, "w") as theFile:
-        theFile.write(theText)
-    slate.title(filename)
-def openFile():
-    try:
+    try: #here, if variable `filename' does not exist, we will ask for a filename. if it does exist, we'll use it. kind of like how a normal text editor makes you save as the same file until you click "New".
         yolo = filename
         del yolo
         keepTheFilename = True
     except:
         keepTheFilename = False
+    if not keepTheFilename:
+        from os.path import expanduser
+        home = expanduser("~")
+        filename = filedialog.asksaveasfilename(initialdir=home, title="Saving file")
+    print("Saving to  %s" % filename, end="\r")
+    theText = text.get(0.0, "end-1c") #https://stackoverflow.com/a/14824164/9654083
+    with open(filename, "w") as theFile:
+        theFile.write(theText)
+    slate.title(filename)
+def openFile():
     from os.path import expanduser
     if not keepTheFilename:
         home = expanduser("~")
