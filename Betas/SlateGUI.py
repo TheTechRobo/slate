@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import messagebox as msg
 from tkinter import filedialog #https://pythonspot.com/tk-file-dialogs/
 def save():
     from os.path import expanduser
@@ -19,7 +20,7 @@ def openFile():
 def deleteAll():
     text.delete(0.0, END)
 def hello():
-    msg.info("About", "slate is a decent plain-text editor. Thanks for using!")
+    msg.showinfo("About", "slate is a decent plain-text editor. Thanks for using!")
     Label(slate, text="To-Dos: - add \"staying on file\" (instead of having to type the filename over and over again; - copy-paste functions; - and more!").pack()
 
 slate = Tk() #set up window. `slate' is now the name of the window, internally
