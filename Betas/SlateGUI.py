@@ -12,6 +12,6 @@ for line in range(100000):
 
 mylist.pack( side = LEFT, fill = BOTH )
 scrollbar.config( command = mylist.yview )
-scrollbarX.config(command=mylist.yview)
+scrollbarX.config(command=mylist.xview)
 
 mainloop()
