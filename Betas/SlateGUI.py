@@ -1,7 +1,8 @@
 from tkinter import *
-
+from tkinter import filedialog
 def save():
-    print("WIP")
+    filename = filedialog.askopenfilename(initialdir="/", title="Saving file", filetypes=("all files", "*.*"))
+    print("WIP %s" % filename)
 
 slate = Tk() #set up window. `slate' is now the name of the window, internally
 scrollbar = Scrollbar(slate, orient=VERTICAL) #set up scrollbar
