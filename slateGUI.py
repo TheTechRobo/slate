@@ -19,9 +19,8 @@ def save():
     slate.title(filename)
 def openFile():
     from os.path import expanduser
-    if not keepTheFilename:
-        home = expanduser("~")
-        filename = filedialog.askopenfilename(initialdir=home, title="Select file to open")
+    home = expanduser("~")
+    filename = filedialog.askopenfilename(initialdir=home, title="Select file to open")
     with open(filename, "r") as theFile:
         theText = theFile.read()
         text.delete(0.0, END)
