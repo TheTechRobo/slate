@@ -18,6 +18,9 @@ def openFile():
         text.insert(END, theText)
 def deleteAll():
     text.delete(0.0, END)
+def hello():
+    msg.info("About", "slate is a decent plain-text editor. Thanks for using!")
+    Label(slate, text="To-Dos: - add \"staying on file\" (instead of having to type the filename over and over again; - copy-paste functions; - and more!").pack()
 
 slate = Tk() #set up window. `slate' is now the name of the window, internally
 slate.title("slate") #set up window. `slate' is now the word in the title bar
@@ -34,16 +37,17 @@ w.pack(padx=5, pady=10, side=LEFT)
 w2.pack(padx=5, pady=10, side=LEFT)
 
 #set up menubar
-slenu = Menu(menubar, tearoff=0)
-slenu.add_command(label="About...", command=hello)
-slenu.add_separator()
+menubar = Menu(main) #add menubar
+slenu = Menu(menubar, tearoff=0) #add "slenu" cascade
+slenu.add_command(label="About...", command=hello) #add command
+slenu.add_separator() #add separator
 slenu.add_command(label="Exit slate", command=slate.quit)
-menubar.add_cascade(label="slate", menu=slenu)
+menubar.add_cascade(label="slate", menu=slenu) #finalize
 #second menu
 filemenu = Menu(menubar, tearoff=0)
 filemenu.add_command(label="New", command=deleteAll)
 filemenu.add_command(label="Open...", command=openFile)
-filemenu.add_command(label="Save...", command=save
+filemenu.add_command(label="Save...", command=save)
 filemenu.add_separator()
 filemenu.add_command(label="Exit slate", command=slate.quit)
 menubar.add_cascade(label="File", menu=filemenu)
