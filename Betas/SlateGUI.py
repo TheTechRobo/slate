@@ -4,10 +4,10 @@ def save():
     from os.path import expanduser
     home = expanduser("~")
     filename = filedialog.asksaveasfilename(initialdir=home, title="Saving file")
-    print("WIP %s" % filename)
-    theText = get(0.0)
+    print("Saved to  %s" % filename)
+    theText = text.get(0.0, "end-1c") #https://stackoverflow.com/a/14824164/9654083
     with open(filename, "w") as theFile:
-        theFile.write("WIP")
+        theFile.write(theText)
 
 slate = Tk() #set up window. `slate' is now the name of the window, internally
 scrollbar = Scrollbar(slate, orient=VERTICAL) #set up scrollbar
