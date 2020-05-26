@@ -9,16 +9,27 @@ def save():
     theText = text.get(0.0, "end-1c") #https://stackoverflow.com/a/14824164/9654083
     with open(filename, "w") as theFile:
         theFile.write(theText)
+    slate.title(filename)
 def openFile():
+    try:
+        yolo = filename
+        del yolo
+        keepTheFilename = True
+    except:
+        keepTheFilename = False
     from os.path import expanduser
-    home = expanduser("~")
-    filename = filedialog.askopenfilename(initialdir=home, title="Select file to open")
+    if not keepTheFilename:
+        home = expanduser("~")
+        filename = filedialog.askopenfilename(initialdir=home, title="Select file to open")
     with open(filename, "r") as theFile:
         theText = theFile.read()
         text.delete(0.0, END)
         text.insert(END, theText)
+    slate.title(filename)
 def deleteAll():
     text.delete(0.0, END)
+    slate.title("slate")
+    del filename
 def hello():
     msg.showinfo("About", "slate is a decent plain-text editor. Thanks for using!")
     Label(slate, text="To-Dos: - add \"staying on file\" (instead of having to type the filename over and over again; - copy-paste functions; - and more!").pack()
