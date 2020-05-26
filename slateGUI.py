@@ -8,14 +8,15 @@ def save():
         keepTheFilename = True
     except:
         keepTheFilename = False
-    if not keepTheFilename:
-        from os.path import expanduser
-        home = expanduser("~")
+    from os.path import expanduser
+    home = expanduser("~")
+    if keepTheFilename is True:
         filename = filedialog.asksaveasfilename(initialdir=home, title="Saving file")
     print("Saving to  %s" % filename, end="\r")
     theText = text.get(0.0, "end-1c") #https://stackoverflow.com/a/14824164/9654083
     with open(filename, "w") as theFile:
         theFile.write(theText)
+        print("Saving to  %s, done." % filename)
     slate.title(filename)
 def openFile():
     from os.path import expanduser
