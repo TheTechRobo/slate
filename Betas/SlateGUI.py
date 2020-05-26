@@ -37,7 +37,7 @@ w.pack(padx=5, pady=10, side=LEFT)
 w2.pack(padx=5, pady=10, side=LEFT)
 
 #set up menubar
-menubar = Menu(main) #add menubar
+menubar = Menu(slate) #add menubar
 slenu = Menu(menubar, tearoff=0) #add "slenu" cascade
 slenu.add_command(label="About...", command=hello) #add command
 slenu.add_separator() #add separator
@@ -51,5 +51,6 @@ filemenu.add_command(label="Save...", command=save)
 filemenu.add_separator()
 filemenu.add_command(label="Exit slate", command=slate.quit)
 menubar.add_cascade(label="File", menu=filemenu)
+slate.config(menu=menubar) #add menubar to window
 
 mainloop()
