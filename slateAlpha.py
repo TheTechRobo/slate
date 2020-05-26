@@ -12,19 +12,25 @@ def wait():
     sleep(1.5)
 
 def append():
-    os.system('clear')
+    print(chr(27)+'[2j') #First attempt at clearing the screen with ANSI escape codes.
+    print('\033c') #Second attempt at clearing the screen with ANSI escape codes.
+    print('\x1bc') #Third attempt at clearing the screen with ANSI escape codes.
     print("Mode: Append (a)")
     file = input("Filename?")
     if file.lower() == "exit,!":
     	exit()
     else:
         my_file = open(file, "a+") #open user file as append or, if it doesn't exist, create it
-        os.system('clear')
+        print(chr(27)+'[2j') #First attempt at clearing the screen with ANSI escape codes.
+        print('\033c') #Second attempt at clearing the screen with ANSI escape codes.
+        print('\x1bc') #Third attempt at clearing the screen with ANSI escape codes.
         my_file.write(input("Type a line. ")) #Append to the file
     print()
 
 def overwrite():
-    os.system('clear')
+    print(chr(27)+'[2j') #First attempt at clearing the screen with ANSI escape codes.
+    print('\033c') #Second attempt at clearing the screen with ANSI escape codes.
+    print('\x1bc') #Third attempt at clearing the screen with ANSI escape codes.
     print("Mode: Overwrite or newfile (w)")
     file = input("Enter filename: ")
     if file.lower() == "exit,!":
@@ -34,7 +40,9 @@ def overwrite():
         my_file.write(input("Type a line. ")) #Write to the file
 		
 def newline():
-    os.system('clear')
+    print(chr(27)+'[2j') #First attempt at clearing the screen with ANSI escape codes.
+    print('\033c') #Second attempt at clearing the screen with ANSI escape codes.
+    print('\x1bc') #Third attempt at clearing the screen with ANSI escape codes.
     print("Mode: Newline (l)")
     file = input("Filename?")
     if file.lower() == "exit,!":
@@ -46,7 +54,9 @@ def newline():
 wait()
 print("Done.")
 while True:
-    os.system('clear')
+    print(chr(27)+'[2j') #First attempt at clearing the screen with ANSI escape codes.
+    print('\033c') #Second attempt at clearing the screen with ANSI escape codes.
+    print('\x1bc') #Third attempt at clearing the screen with ANSI escape codes.
     mode = input("Mode: a for append, w for overwrite (or newfile), l for newline, exit,! for exit. ")
     mode = mode.lower()
 	#APPEND
@@ -63,11 +73,15 @@ while True:
         exit()
 #OTHERWISE......
     else: 
-        os.system('clear')
+        print(chr(27)+'[2j') #First attempt at clearing the screen with ANSI escape codes.
+        print('\033c') #Second attempt at clearing the screen with ANSI escape codes.
+        print('\x1bc') #Third attempt at clearing the screen with ANSI escape codes.
         print("Command not found; you need to type a(ppend), or (over)w(rite), or (new)l(ine) To exit, exit,!. Sorry for the inconvenience")
         print("Please wait...")
         wait()
 # No More If Statements
-    os.system('clear')
+    print(chr(27)+'[2j') #First attempt at clearing the screen with ANSI escape codes.
+    print('\033c') #Second attempt at clearing the screen with ANSI escape codes.
+    print('\x1bc') #Third attempt at clearing the screen with ANSI escape codes.
     print("Please wait...")
     wait()
