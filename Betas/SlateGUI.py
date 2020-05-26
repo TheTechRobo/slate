@@ -5,6 +5,9 @@ def save():
     home = expanduser("~")
     filename = filedialog.asksaveasfilename(initialdir=home, title="Saving file")
     print("WIP %s" % filename)
+    theText = get(0.0)
+    with open(filename, "w") as theFile:
+        theFile.write("WIP")
 
 slate = Tk() #set up window. `slate' is now the name of the window, internally
 scrollbar = Scrollbar(slate, orient=VERTICAL) #set up scrollbar
