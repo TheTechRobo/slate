@@ -1,5 +1,5 @@
 from tkinter import *
-from tkinter import filedialog
+from tkinter import filedialog #https://pythonspot.com/tk-file-dialogs/
 def save():
     filename = filedialog.askopenfilename(initialdir="/", title="Saving file", filetypes=("all files", "*.*"))
     print("WIP %s" % filename)
