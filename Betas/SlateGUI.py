@@ -8,7 +8,7 @@ def save():
     theText = text.get(0.0, "end-1c") #https://stackoverflow.com/a/14824164/9654083
     with open(filename, "w") as theFile:
         theFile.write(theText)
-def open():
+def openFile():
     from os.path import expanduser
     home = expanduser("~")
     filename = filedialog.askopenfilename(initialdir=home, title="Select file to open")
@@ -26,6 +26,6 @@ text = Text(slate, yscrollcommand=scrollbar.set)
 text.pack()
 scrollbar.config( command = text.yview )
 Button(slate, text="Save", command=save).pack()
-Button(slate, text="Open", command=open).pack()
+Button(slate, text="Open", command=openFile).pack()
 
 mainloop()
