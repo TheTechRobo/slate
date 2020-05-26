@@ -18,6 +18,7 @@ def open():
         text.insert(END, theText)
 
 slate = Tk() #set up window. `slate' is now the name of the window, internally
+slate.title("slate") #set up window. `slate' is now the word in the title bar
 scrollbar = Scrollbar(slate, orient=VERTICAL) #set up scrollbar
 scrollbar.pack( side = RIGHT, fill = Y ) #vertical
 
@@ -25,5 +26,6 @@ text = Text(slate, yscrollcommand=scrollbar.set)
 text.pack()
 scrollbar.config( command = text.yview )
 Button(slate, text="Save", command=save).pack()
+Button(slate, text="Open", command=open).pack()
 
 mainloop()
