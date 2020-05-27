@@ -1,6 +1,9 @@
 from tkinter import *
 from tkinter import messagebox as msg
 from tkinter import filedialog #https://pythonspot.com/tk-file-dialogs/
+def quitSlate():
+    # the only reason this is here is for leeway
+    slate.quit()
 def save():
     try: # If the exception occurs, keepTheFilename = False
         yolo = filename
@@ -48,7 +51,9 @@ text.pack()
 scrollbar.config( command = text.yview )
 w = Button(slate, text="Save", command=save)
 w2 = Button(slate, text="Open", command=openFile)
+w3 = Button(slate, text="New", command=deleteAll)
 
+w3.pack(padx=5, pady=10, side=LEFT)
 w.pack(padx=5, pady=10, side=LEFT)
 w2.pack(padx=5, pady=10, side=LEFT)
 
@@ -57,7 +62,7 @@ menubar = Menu(slate) #add menubar
 slenu = Menu(menubar, tearoff=0) #add "slenu" cascade
 slenu.add_command(label="About...", command=hello) #add command
 slenu.add_separator() #add separator
-slenu.add_command(label="Exit slate", command=slate.quit)
+slenu.add_command(label="Quit slate", command=quitSlate)
 menubar.add_cascade(label="slate", menu=slenu) #finalize
 #second menu
 filemenu = Menu(menubar, tearoff=0)

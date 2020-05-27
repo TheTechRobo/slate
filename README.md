@@ -6,4 +6,4 @@
  If an experimento is made into a standalone program, I call it a "Eureka!"
 
 
- 
+ CURRENTLY THERE IS A REALLY COOL GUI, TRY IT OUT!
