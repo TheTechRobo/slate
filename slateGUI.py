@@ -15,6 +15,9 @@ def save():
     home = expanduser("~")
     if keepTheFilename is not True: # If the exception occurred, this if statement will not be launched, hence filename haven't been defined
         filename = filedialog.asksaveasfilename(initialdir=home, title="Saving file")
+        if filename == "":
+            print("Filename blank; aborting.")
+            return 0
     else:
         global filename
     print("Saving to  %s" % filename, end="\r")
@@ -27,6 +30,9 @@ def openFile():
     from os.path import expanduser
     home = expanduser("~")
     filename = filedialog.askopenfilename(initialdir=home, title="Select file to open")
+    if filename == "":
+        print("Filename blank; aborting.")
+        return 0
     with open(filename, "r") as theFile:
         theText = theFile.read()
         text.delete(0.0, END)
