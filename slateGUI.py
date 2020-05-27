@@ -30,12 +30,13 @@ def openFile():
         text.insert(END, theText)
     slate.title(filename)
 def deleteAll():
+    global filename
     text.delete(0.0, END)
     slate.title("slate")
     del filename
 def hello():
     msg.showinfo("About", "slate is a decent plain-text editor. Thanks for using!")
-    Label(slate, text="To-Dos: - add \"staying on file\" (instead of having to type the filename over and over again; - copy-paste functions; - and more!").pack()
+    Label(slate, text="To-Dos: - copy-paste functions; - and more!").pack()
 
 slate = Tk() #set up window. `slate' is now the name of the window, internally
 slate.title("slate") #set up window. `slate' is now the word in the title bar
