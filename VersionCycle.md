@@ -7,6 +7,8 @@ It is the first stage of the new version. Not very developed yet. RC 1
 More developed = better version. RC2
 ### 3rd Stage: Gamma
 This is the getting-near-to-release version. It's RC 3. 
+### Stage 3 1/2: Delta
+I normally skip this one. RC3.5 — Not quite omega but better than gamma.
 ### 4th Stage and Last Prerelease: Omega
 This is the last prerelease. RC 4.
 ### 5th Stage: Release
