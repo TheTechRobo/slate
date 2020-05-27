@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import messagebox as msg
 from tkinter import filedialog #https://pythonspot.com/tk-file-dialogs/
 def save():
-    try: #here, if variable `filename' does not exist, we will ask for a filename. if it does exist, we'll use it. kind of like how a normal text editor makes you save as the same file until you click "New".
+    try: # If the exception occurs, keepTheFilename = False
         yolo = filename
         del yolo
         keepTheFilename = True
@@ -10,8 +10,10 @@ def save():
         keepTheFilename = False
     from os.path import expanduser
     home = expanduser("~")
-    if keepTheFilename is True:
+    if keepTheFilename is not True: # If the exception occurred, this if statement will not be launched, hence filename haven't been defined
         filename = filedialog.asksaveasfilename(initialdir=home, title="Saving file")
+    else:
+        global filename
     print("Saving to  %s" % filename, end="\r")
     theText = text.get(0.0, "end-1c") #https://stackoverflow.com/a/14824164/9654083
     with open(filename, "w") as theFile:
