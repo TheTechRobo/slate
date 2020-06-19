@@ -45,7 +45,7 @@ def deleteAll():
     del filename
 def hello():
     msg.showinfo("About", "slate is a decent plain-text editor. Thanks for using!")
-    Label(slate, text="To-Dos: - copy-paste functions; - and more!").pack()
+    Label(slate, text="To-Dos: - copy-paste functions; - every few minutes save as a temporary file, and when opening and newfile'ing, and willhave a list of 'em at startup that will ask user if wants to recover;- and more!").pack()
 
 slate = Tk() #set up window. `slate' is now the name of the window, internally
 slate.title("slate") #set up window. `slate' is now the word in the title bar
